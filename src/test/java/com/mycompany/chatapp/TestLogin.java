@@ -15,7 +15,7 @@ public class TestLogin {
 
     // Test 1: Username correctly formatted
     @Test
-    public void testUsernCorrectlyFormatted() {
+    public void testUsernameCorrectlyFormatted() {
  login.registerUser("Kyle", "Mhuruyengwe", "kyl_1", "Ch&&sec@ke99!", "+27838968976");
         boolean success = login.loginUser("kyl_1", "Ch&&sec@ke99!");
          assertEquals("Welcome Kyle, Mhuruyengwe it is great to see you again.",
@@ -24,7 +24,7 @@ public class TestLogin {
 
     // Test 2: Username incorrectly formatted
     @Test
-    public void testUsernameIncorrectlyFormat() {
+    public void testUsernameIncorrectlyFormatted() {
           String result = login.registerUser("Kyle", "Mhuruyengwe", "kyle!!!!!!!", "Ch&&sec@ke99!", "+27838968976");
         assertEquals("Username is not correctly formatted; please ensure that your username contains an underscore and is no more than five characters in length.", result);
     }
@@ -75,7 +75,7 @@ public class TestLogin {
 
  // Test 9: Username correctly formatted 
     @Test
-      public void testCheckUserNameTrue() {
+      public void testCheckUserTrue() {
         assertTrue(login.checkUserName("kyl_1"));
     }
 

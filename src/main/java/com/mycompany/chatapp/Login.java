@@ -60,12 +60,12 @@ public class Login {
     return "Username successfully captured.\nPassword successfully captured.\nCell number successfully captured.";
 }
 
-    // 5. Login user
+    // 5. Logging in  user
     public boolean loginUser(String username, String password) {
         return username.equals(storedUsername) && password.equals(storedPassword);
     }
 
-   // 6. Return login status message
+   // 6. Return login status massage
 public String returnLoginStatus(boolean success) {
     if (success) {
         return "Welcome " + firstName + ", " + lastName + " it is great to see you again.";
