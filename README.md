@@ -1,6 +1,5 @@
-# Chat App – Programming PoE
+#  Programming PoE
 
-## Student
 **Name:** Makanaka Shania Mhuruyengwe  
 **Project:** Chat Application  
 Part :Part 1
