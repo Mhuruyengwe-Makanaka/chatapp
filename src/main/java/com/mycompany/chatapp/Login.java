@@ -36,7 +36,7 @@ public class Login {
     if (cellNumber == null || cellNumber.isEmpty()) {
         return false;
     }
-    // +27 followed by exactly 9 digits total of 12 characters
+    // +27 followed by  9 digits 
     String pattern = "^\\+27[0-9]{9}$";
     return cellNumber.matches(pattern);
 }
