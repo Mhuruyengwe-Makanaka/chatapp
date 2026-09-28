@@ -3,7 +3,7 @@
 ## Student
 **Name:** Makanaka Shania Mhuruyengwe  
 **Project:** Chat Application  
-**Part :Part 1
+Part :Part 1
 
 ## Reference
  GeeksforGeeks (2025) ‘Validate Phone Numbers (with Country Code extension) using Regular Expression’. 
