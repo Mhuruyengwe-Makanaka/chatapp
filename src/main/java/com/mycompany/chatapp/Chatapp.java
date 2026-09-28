@@ -38,6 +38,8 @@ public class Chatapp {
 
             String message = login.registerUser(firstName, lastName, username, password, cellNumber);
 
+            System.out.println(message);
+            
             System.out.println("\n *** LOGIN***");
 
             System.out.print("Enter username: ");
