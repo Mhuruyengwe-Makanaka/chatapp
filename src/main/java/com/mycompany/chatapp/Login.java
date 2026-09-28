@@ -42,33 +42,34 @@ public class Login {
 }
 
     // 4. Register user - returns message
-    public String registerUser(String username, String password, String cellNumber) {
-        if (!checkUserName(username)) {
-            return "Username is not correctly formatted; please ensure that your username contains an underscore and is no more than five characters legth.";
-        }
-        if (!checkPasswordComplexity(password)) {
-            return "Password is not correctly formatted; please ensure that the password contains at least eight characters, a capital letter, a number, and a special character.";
-        }
-        if (!checkCellPhoneNumber(cellNumber)) {
-            return "Cell number is incorrectly formatted or does not contain an international code; please correct the number and try again.";
-        }
-       
-        this.storedUsername = username;
-        this.storedPassword = password;
-        this.storedCellNumber = cellNumber;
-        return "Username successfully captured.\nPassword successfully captured.\nCell  number successfully captured.";
+    public String registerUser(String firstName, String lastName, String username, String password, String cellNumber) {
+    if (!checkUserName(username)) {
+        return "Username is not correctly formatted; please ensure that your username contains an underscore and is no more than five characters in length.";
     }
+    if (!checkPasswordComplexity(password)) {
+        return "Password is not correctly formatted; please ensure that the password contains at least eight characters, a capital letter, a number, and a special character.";
+    }
+    if (!checkCellPhoneNumber(cellNumber)) {
+        return "Cell number is incorrectly formatted or does not contain an international code; please correct the number and try again.";
+    }
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.storedUsername = username;
+    this.storedPassword = password;
+    this.storedCellNumber = cellNumber;
+    return "Username successfully captured.\nPassword successfully captured.\nCell number successfully captured.";
+}
 
     // 5. Login user
     public boolean loginUser(String username, String password) {
         return username.equals(storedUsername) && password.equals(storedPassword);
     }
 
-    // 6. Return login status message
-    public String returnLoginStatus(boolean success, String firstName, String lastName) {
-        if (success) {
-            return "Welcome " + firstName + ", " + lastName + " it is great to see you again.";
-        }
-        return "Username or password incorrect, please try again.";
+   // 6. Return login status message
+public String returnLoginStatus(boolean success) {
+    if (success) {
+        return "Welcome " + firstName + ", " + lastName + " it is great to see you again.";
     }
+    return "Username or password incorrect, please try again.";
+}
 }

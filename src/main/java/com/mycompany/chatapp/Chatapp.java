@@ -36,8 +36,7 @@ public class Chatapp {
             System.out.print("Enter cell number (+27): ");
             String cellNumber = scanner.nextLine();
 
-            String message = login.registerUser(username, password, cellNumber);
-            System.out.println(message);
+            String message = login.registerUser(firstName, lastName, username, password, cellNumber);
 
             System.out.println("\n *** LOGIN***");
 
@@ -48,10 +47,8 @@ public class Chatapp {
             String loginPassword = scanner.nextLine();
 
             boolean success = login.loginUser(loginUsername, loginPassword);
-
-            System.out.println(
-                    login.returnLoginStatus(success, firstName, lastName)
-            );
+           
+            System.out.println(login.returnLoginStatus(success));
         }
     }
 }
