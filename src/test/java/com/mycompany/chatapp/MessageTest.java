@@ -15,6 +15,7 @@ public class MessageTest {
     // 1. test method length (not more than 250)
     @Test
     public void testMessageLengthSuccess() {
+        Message msg = new Message(
                 "+27718693002",
                 "Hi Mike, can you join us for dinner tonight"
         );
